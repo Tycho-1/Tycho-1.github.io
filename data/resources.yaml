@@ -1,0 +1,99 @@
+- category: Kubernetes & cloud-native
+  items:
+    - title: Kubernetes documentation
+      url: https://kubernetes.io/docs/
+      note: Core reference for workloads, networking, and cluster operations.
+
+    - title: CNCF
+      url: https://www.cncf.io
+      note: Home of the cloud-native ecosystem — projects, landscape, and community.
+
+- category: CI/CD & GitOps
+  items:
+    - title: GitHub Actions
+      url: https://github.com/features/actions
+      note: CI/CD for this portfolio and project pipelines.
+
+    - title: Flux
+      url: https://fluxcd.io
+      note: GitOps toolkit used in my banking platform project.
+
+    - title: Argo CD
+      url: https://argo-cd.readthedocs.io
+      note: Declarative GitOps continuous delivery for Kubernetes.
+
+- category: Packaging & configuration
+  items:
+    - title: Kustomize
+      url: https://kustomize.io
+      note: Native Kubernetes configuration overlays — used in my banking platform project.
+
+    - title: Helm
+      url: https://helm.sh
+      note: Package manager for Kubernetes — charts for deploying and versioning applications.
+
+- category: Networking
+  items:
+    - title: Cilium
+      url: https://cilium.io
+      note: eBPF-based networking, observability, and security for Kubernetes.
+
+    - title: Istio
+      url: https://istio.io
+      note: Service mesh for traffic management, security, and observability on Kubernetes.
+
+- category: Internal developer platform
+  items:
+    - title: Backstage
+      url: https://backstage.io
+      note: Open source IDP — software catalog, scaffolding, and developer portal for platform teams.
+
+- category: Observability
+  items:
+    - title: OpenTelemetry
+      url: https://opentelemetry.io
+      note: Vendor-neutral traces, metrics, and logs — used in platform demos.
+
+    - title: Prometheus
+      url: https://prometheus.io
+      note: Metrics collection and alerting for Kubernetes workloads.
+
+    - title: Grafana
+      url: https://grafana.com
+      note: Dashboards and visualization on top of Prometheus and other data sources.
+
+- category: Policy & security
+  items:
+    - title: Kyverno
+      url: https://kyverno.io
+      note: Kubernetes-native policy management with validate, mutate, and generate rules.
+
+- category: Secrets & identity
+  items:
+    - title: External Secrets Operator
+      url: https://external-secrets.io
+      note: Sync secrets from external stores into Kubernetes — used in my banking platform project.
+
+    - title: HashiCorp Vault
+      url: https://developer.hashicorp.com/vault
+      note: Secrets management and encryption; common backend for ESO and platform workflows.
+
+    - title: Keycloak
+      url: https://www.keycloak.org
+      note: Open source IAM — OIDC and SSO; exploring locally in my Kind lab (not yet in a public repo).
+
+- category: Data
+  items:
+    - title: CloudNativePG
+      url: https://cloudnative-pg.io
+      note: Kubernetes operator for PostgreSQL — HA, backups, and lifecycle management for stateful workloads.
+
+- category: Infrastructure as code
+  items:
+    - title: Terraform
+      url: https://developer.hashicorp.com/terraform
+      note: Infrastructure provisioning — used for AWS and cluster foundations.
+
+    - title: Crossplane
+      url: https://www.crossplane.io
+      note: Kubernetes control plane for cloud resources — focus of my Crossplane study.

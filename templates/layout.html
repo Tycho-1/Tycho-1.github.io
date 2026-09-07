@@ -1,0 +1,46 @@
+{{define "head"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{.Site.Tagline}}">
+  <title>{{if .PageTitle}}{{.PageTitle}} — {{end}}{{.Site.Name}}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body{{if .WideLayout}} class="layout-wide"{{end}}>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">{{brand .Site}}</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/resources/">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+{{end}}
+
+{{define "foot"}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; {{.Site.Name}}</p>
+      <div class="footer-links">
+        {{if .Site.GitHub}}<a href="{{.Site.GitHub}}">GitHub</a>{{end}}
+        {{if .Site.LinkedIn}}<a href="{{.Site.LinkedIn}}">LinkedIn</a>{{end}}
+        {{if .Site.Email}}<a href="mailto:{{.Site.Email}}">Email</a>{{end}}
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({ startOnLoad: true, theme: "neutral" });
+  </script>
+</body>
+</html>
+{{end}}

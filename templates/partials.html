@@ -1,0 +1,15 @@
+{{define "project-card"}}
+<article class="card">
+  <h3><a href="{{projectURL .Slug}}">{{.Title}}</a></h3>
+  <p>{{.Summary}}</p>
+  {{if .Tags}}
+  <ul class="tag-list">
+    {{range .Tags}}<li>{{.}}</li>{{end}}
+  </ul>
+  {{end}}
+  <div class="card-actions">
+    <a href="{{projectURL .Slug}}">Read more →</a>
+    {{if .Repo}}<a href="{{.Repo}}" rel="noopener noreferrer">GitHub</a>{{end}}
+  </div>
+</article>
+{{end}}

@@ -1,0 +1,22 @@
+{{define "resources.html"}}
+{{template "head" .}}
+<section class="page-header">
+  <h1>Resources</h1>
+  <p class="lead">Tools, docs, and communities I use in platform and Kubernetes work.</p>
+</section>
+
+{{range .Categories}}
+<section class="resource-section">
+  <h2>{{.Name}}</h2>
+  <ul class="resource-list">
+    {{range .Items}}
+    <li class="resource-item">
+      <a href="{{.URL}}" rel="noopener noreferrer">{{.Title}}</a>
+      {{if .Note}}<p>{{.Note}}</p>{{end}}
+    </li>
+    {{end}}
+  </ul>
+</section>
+{{end}}
+{{template "foot" .}}
+{{end}}

@@ -1,0 +1,32 @@
+- slug: banking-platform
+  title: Tiho Banking Platform
+  summary: Portable Kubernetes deployment of a multi-service banking demo.
+  tags: [Kubernetes, Flux, Kustomize, OpenTelemetry, External Secrets, CloudNativePG, GitHub Actions]
+  repo: https://github.com/Tycho-1/tiho-banking-platform
+  featured: true
+  order: 1
+
+- slug: aws-eks-reference-platform
+  title: AWS EKS Reference Platform
+  summary: Terraform-based EKS platform with Cilium networking, Karpenter autoscaling, and optional Flux GitOps.
+  tags: [AWS, EKS, Terraform, Kubernetes, Cilium, Karpenter, Flux]
+  repo: https://github.com/Tycho-1/aws-eks-reference-platform
+  featured: true
+  order: 2
+
+- slug: crossplane-study
+  title: Crossplane Study
+  summary: Learning Kubernetes-native platform APIs with Crossplane v2 compositions.
+  tags: [Crossplane, Kubernetes, IaC]
+  repo: https://github.com/Tycho-1/crossplane-study
+  featured: true
+  order: 3
+
+- slug: kind-cluster
+  title: Tiho Kind Cluster
+  summary: Local Kubernetes platform lab for experiments and tooling.
+  tags: [Kind, Cilium, Kubernetes]
+  repo: https://github.com/Tycho-1/tiho-kind-cluster
+  featured: false
+  draft: true
+  order: 99

@@ -1,0 +1,23 @@
+{{define "project.html"}}
+{{template "head" .}}
+<article class="project-page">
+  <header class="project-header">
+    <p class="eyebrow"><a href="/projects/">Projects</a></p>
+    <h1>{{.Project.Title}}</h1>
+    <p class="lead">{{.Project.Summary}}</p>
+    {{if .Project.Tags}}
+    <ul class="tag-list">
+      {{range .Project.Tags}}<li>{{.}}</li>{{end}}
+    </ul>
+    {{end}}
+    {{if .Project.Repo}}
+    <p><a class="button-link" href="{{.Project.Repo}}" rel="noopener noreferrer">View repository</a></p>
+    {{end}}
+  </header>
+
+  <div class="markdown-body">
+    {{.Body}}
+  </div>
+</article>
+{{template "foot" .}}
+{{end}}
