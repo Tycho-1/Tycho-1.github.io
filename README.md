@@ -35,7 +35,8 @@ Requires Go 1.26+.
 │   ├── crossplane-study.md
 │   └── <slug>.md                  # filename must match slug in projects.yaml
 ├── static/                        # assets copied as-is into dist/
-│   └── style.css                  # colors, layout, header/footer styling
+│   ├── style.css                  # colors, layout, header/footer styling
+│   └── webmcp.js                  # WebMCP tool registration (document.modelContext)
 ├── templates/                     # HTML page shells (Go html/template)
 │   ├── layout.html                # shared header, nav, footer
 │   ├── home.html                  # landing page
@@ -50,6 +51,7 @@ Requires Go 1.26+.
 │   ├── markdown/                  # GFM → HTML, Mermaid block transform
 │   ├── render/                    # executes templates → dist/*.html
 │   ├── static/                    # copies static/ → dist/
+│   ├── webdata/                   # writes dist/data/*.json for WebMCP tools
 │   └── site/                      # Build() — orchestrates the full pipeline
 ├── main.go                        # CLI entry: go run . / -serve / -o dist
 ├── .github/workflows/pages.yml    # CI: vet, build dist, deploy to GitHub Pages
@@ -191,6 +193,20 @@ Mermaid diagrams work in fenced `mermaid` code blocks inside project markdown.
 ### Draft projects
 
 Set `draft: true` in `projects.yaml` to hide a project from the build until it is ready to publish (e.g. `kind-cluster`).
+
+## WebMCP (experimental)
+
+The site exposes three [WebMCP](https://github.com/webmachinelearning/webmcp) tools via `document.modelContext` on every page:
+
+| Tool | Data source |
+|------|-------------|
+| `listProjects` | `dist/data/projects.json` |
+| `getProject` | `dist/data/projects/<slug>.json` |
+| `listResources` | `dist/data/resources.json` |
+
+JSON is generated at build time from `data/projects.yaml` and `data/resources.yaml`. Client registration lives in `static/webmcp.js`.
+
+**Try it:** enable `chrome://flags/#enable-webmcp-testing` in Chrome Canary, serve the site over HTTPS (or `go run . -serve` locally), then use a WebMCP-capable browser agent on the page.
 
 ## CI
 
