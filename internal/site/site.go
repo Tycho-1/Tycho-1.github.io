@@ -14,6 +14,7 @@ import (
 	"github.com/Tycho-1/gh-pages-portfolio/internal/render"
 	"github.com/Tycho-1/gh-pages-portfolio/internal/resources"
 	"github.com/Tycho-1/gh-pages-portfolio/internal/static"
+	"github.com/Tycho-1/gh-pages-portfolio/internal/webdata"
 )
 
 // Config holds paths and metadata for site generation.
@@ -108,6 +109,10 @@ func (g *Generator) Build() error {
 		Categories: resourceCategories,
 	}); err != nil {
 		return fmt.Errorf("render resources: %w", err)
+	}
+
+	if err := webdata.Write(out, published, resourceCategories); err != nil {
+		return fmt.Errorf("write web data: %w", err)
 	}
 
 	if err := static.Copy(filepath.Join(root, "static"), out); err != nil {

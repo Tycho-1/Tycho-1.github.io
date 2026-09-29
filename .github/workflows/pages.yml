@@ -37,6 +37,9 @@ jobs:
           test -f dist/projects/index.html
           test -f dist/resources/index.html
           test -f dist/style.css
+          test -f dist/webmcp.js
+          test -f dist/data/projects.json
+          test -f dist/data/resources.json
           test -f dist/.nojekyll
 
       - uses: actions/upload-pages-artifact@v5
