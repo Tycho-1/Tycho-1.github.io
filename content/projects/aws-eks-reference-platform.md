@@ -255,6 +255,7 @@ The project is structured around a small set of recurring ideas:
 
 | Project | Role |
 |---------|------|
+| **[gcp-gke-reference-platform](https://github.com/Tycho-1/gcp-gke-reference-platform)** | **GCP sister repo** — GKE bootstrap (Dataplane V2, layered Terraform, Flux) |
 | **[tiho-banking-platform](https://github.com/Tycho-1/tiho-banking-platform)** | Application layer — Kustomize overlays, microservices, portable Kubernetes manifests |
 | **This EKS platform** | AWS cluster bootstrap — networking, CNI, autoscaling, GitOps entry point |
 | **[aws-solutions-architect-reference](https://github.com/Tycho-1/aws-solutions-architect-reference)** | AWS architecture study notes — VPC, IAM, RDS, ingress patterns that inform platform gaps |
