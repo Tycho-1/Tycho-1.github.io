@@ -14,13 +14,21 @@
   featured: true
   order: 2
 
+- slug: gcp-gke-reference-platform
+  title: GCP GKE Reference Platform
+  summary: Terraform-based GKE platform with VPC-native networking, layered state, and Flux (or Argo CD) bootstrap.
+  tags: [GCP, GKE, Terraform, Kubernetes, Flux]
+  repo: https://github.com/Tycho-1/gcp-gke-reference-platform
+  featured: true
+  order: 3
+
 - slug: crossplane-study
   title: Crossplane Study
   summary: Learning Kubernetes-native platform APIs with Crossplane v2 compositions.
   tags: [Crossplane, Kubernetes, IaC]
   repo: https://github.com/Tycho-1/crossplane-study
   featured: true
-  order: 3
+  order: 4
 
 - slug: kind-cluster
   title: Tiho Kind Cluster
