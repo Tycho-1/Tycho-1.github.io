@@ -22,13 +22,21 @@
   featured: true
   order: 3
 
+- slug: az-aks-reference-platform
+  title: Azure AKS Reference Platform
+  summary: Terraform-based AKS platform with private-by-default networking in prod and optional Flux GitOps.
+  tags: [Azure, AKS, Terraform, Kubernetes, Flux]
+  repo: https://github.com/Tycho-1/az-aks-reference-platform
+  featured: true
+  order: 4  
+
 - slug: crossplane-study
   title: Crossplane Study
   summary: Learning Kubernetes-native platform APIs with Crossplane v2 compositions.
   tags: [Crossplane, Kubernetes, IaC]
   repo: https://github.com/Tycho-1/crossplane-study
   featured: true
-  order: 4
+  order: 5
 
 - slug: kind-cluster
   title: Tiho Kind Cluster
