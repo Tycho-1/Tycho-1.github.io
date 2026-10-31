@@ -286,6 +286,7 @@ The project is structured around a small set of recurring ideas:
 | Project | Role |
 | --- | --- |
 | **[aws-eks-reference-platform](https://github.com/Tycho-1/aws-eks-reference-platform)** | AWS cluster bootstrap — Cilium, Karpenter, Flux; **sister repo** for tycho-1.github.io symmetry |
+| **[az-aks-reference-platform](https://github.com/Tycho-1/az-aks-reference-platform)** | **Azure sister repo** — AKS bootstrap (private-by-default prod, optional Flux) |
 | **[tiho-banking-platform](https://github.com/Tycho-1/tiho-banking-platform)** | Application layer — Kustomize overlays, Bank of Anthos; can run on a cluster bootstrapped here (verified with external fleet on **2026-10-08**) |
 
 A realistic end-to-end story: **Terraform provisions GKE (this repo)** → **Flux reconciles platform and app manifests (fleet repo)** → **banking-platform or other overlays run on the cluster**.
